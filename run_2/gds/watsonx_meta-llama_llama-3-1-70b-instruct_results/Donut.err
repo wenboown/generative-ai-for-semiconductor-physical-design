@@ -1,0 +1,6 @@
+Error in Donut.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp1tr_85su/temp_script.py", line 28, in <module>
+    lib.write_gds('donut.gds', unit=1.0e-6, precision=1.0e-9)
+TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit'

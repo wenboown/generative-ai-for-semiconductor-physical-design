@@ -1,0 +1,7 @@
+Error in DLDChip.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpdkf6obos/temp_script.py", line 13, in <module>
+    lib = gdspy.Library()
+          ^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Library'. Did you mean: 'library'?

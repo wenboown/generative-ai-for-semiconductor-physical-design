@@ -1,0 +1,6 @@
+Error in Hexagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpk610p2zk/temp_script.py", line 27, in <module>
+    lib.write_gds('hexagon.gds', unit=1.0, precision=1e-9)
+TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit'

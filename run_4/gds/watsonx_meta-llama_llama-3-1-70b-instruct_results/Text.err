@@ -1,0 +1,7 @@
+Error in Text.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpfiffex_m/temp_script.py", line 14, in <module>
+    text_element = gdspy.Text(text, height, (x_center, y_center), layer=layer, Center=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'Center'

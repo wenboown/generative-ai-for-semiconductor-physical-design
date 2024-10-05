@@ -1,0 +1,7 @@
+Error in Grid.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpq66yrcvd/temp_script.py", line 24, in <module>
+    cell.add(rect.set_layer(layer['layer']).set_datatype(layer['datatype']))
+             ^^^^^^^^^^^^^^
+AttributeError: 'Rectangle' object has no attribute 'set_layer'

@@ -1,0 +1,7 @@
+Error in Octagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp00e9cazb/temp_script.py", line 21, in <module>
+    octagon = gdspy.Polygon(vertices, 1, layer=0, datatype=0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Polygon.__init__() got multiple values for argument 'layer'

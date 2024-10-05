@@ -1,0 +1,9 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpvmza91kl/temp_script.py", line 52, in <module>
+    create_circle_with_fiducials()
+  File "/tmp/tmpvmza91kl/temp_script.py", line 34, in create_circle_with_fiducials
+    annotation_cols = range(1, (circle_radius*2)//fiducial_spacing + 1)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer

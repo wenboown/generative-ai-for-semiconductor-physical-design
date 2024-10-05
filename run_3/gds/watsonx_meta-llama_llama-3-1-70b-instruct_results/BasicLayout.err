@@ -1,0 +1,6 @@
+Error in BasicLayout.gds:
+
+  File "/tmp/tmpm8p0z2wi/temp_script.py", line 29
+    -contact_width = 1
+    ^^^^^^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?

@@ -1,0 +1,6 @@
+Error in Triangle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmphfxjmthn/temp_script.py", line 28, in <module>
+    lib.write_gds('triangle.gds', unit=1.0e-3, precision=1.0e-9)
+TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit'

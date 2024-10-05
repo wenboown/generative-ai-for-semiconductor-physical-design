@@ -1,0 +1,7 @@
+Error in Serpentine.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpkme4kpci/temp_script.py", line 21, in <module>
+    cell.add(gdspy.Path(path_width, points, layer=layer, datatype=datatype))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.__init__() got an unexpected keyword argument 'layer'

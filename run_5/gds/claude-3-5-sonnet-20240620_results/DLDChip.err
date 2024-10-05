@@ -1,0 +1,17 @@
+Error in DLDChip.gds:
+
+/tmp/tmpi7bb9hgi/temp_script.py:32: UserWarning: [GDSPY] Cell Round (1 polygons, 64 vertices, layers [0], datatypes [0]) not found; operations on this CellArray may not work.
+  pillar_array = gdspy.CellArray(pillar, num_pillars_width, num_rows,
+/tmp/tmpi7bb9hgi/temp_script.py:39: UserWarning: [GDSPY] Cell Round (1 polygons, 64 vertices, layers [0], datatypes [0]) not found; operations on this CellArray may not work.
+  row = gdspy.CellArray(pillar, num_pillars_width, 1, (pillar_spacing, row_height),
+Traceback (most recent call last):
+  File "/tmp/tmpi7bb9hgi/temp_script.py", line 56, in <module>
+    lib.write_gds('dld_chip.gds')
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2503, in write_gds
+    cell.to_gds(outfile, self.unit / self.precision, timestamp=timestamp)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 177, in to_gds
+    reference.to_gds(outfile, multiplier)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 1691, in to_gds
+    if len(name) % 2 != 0:
+       ^^^^^^^^^
+TypeError: object of type 'Round' has no len()

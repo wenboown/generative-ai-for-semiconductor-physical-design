@@ -1,0 +1,7 @@
+Error in RoundedSquare.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpn5b9ywm2/temp_script.py", line 12, in <module>
+    square = gdspy.Round(
+             ^^^^^^^^^^^^
+TypeError: Round.__init__() got an unexpected keyword argument 'size'

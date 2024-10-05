@@ -1,0 +1,9 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp1yg42o23/temp_script.py", line 17, in <module>
+    path.parametric(lambda u: r[int(u * (len(t) - 1))] * np.cos(t[int(u * (len(t) - 1))]),
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 1703, in parametric
+    if test_err[0] ** 2 + test_err[1] ** 2 > err:
+       ~~~~~~~~^^^
+IndexError: invalid index to scalar variable.

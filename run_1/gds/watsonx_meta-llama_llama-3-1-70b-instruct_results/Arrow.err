@@ -1,0 +1,6 @@
+Error in Arrow.gds:
+
+  File "/tmp/tmpm65f8gfv/temp_script.py", line 5
+    lib добавли(new_unit='um',grid_unit=0.001)
+        ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

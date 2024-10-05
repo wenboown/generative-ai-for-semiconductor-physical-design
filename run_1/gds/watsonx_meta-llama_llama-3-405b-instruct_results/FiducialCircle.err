@@ -1,0 +1,10 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpvq3oj9u_/temp_script.py", line 30, in <module>
+    fiducial_mark = gdspy.CellReference(gdspy.CellArray([gdspy.Rectangle(fiducial_center, 1.5 * fiducial_size, layer=2)]))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 629, in __init__
+    [point1[0], point2[1]],
+                ~~~~~~^^^
+TypeError: 'float' object is not subscriptable

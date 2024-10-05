@@ -1,0 +1,6 @@
+Error in ComplexLayout.gds:
+
+  File "/tmp/tmp39jlu25h/temp_script.py", line 17
+    active-region = gdspy.Rectangle(
+    ^^^^^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?

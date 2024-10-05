@@ -1,0 +1,6 @@
+Error in Triangle.gds:
+
+  File "/tmp/tmp51cgdagz/temp_script.py", line 32
+    pip install gdspy
+        ^^^^^^^
+SyntaxError: invalid syntax

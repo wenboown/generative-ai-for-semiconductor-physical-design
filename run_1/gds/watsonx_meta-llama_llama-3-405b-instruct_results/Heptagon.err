@@ -1,0 +1,7 @@
+Error in Heptagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmphbeixmq0/temp_script.py", line 23, in <module>
+    polygon = gdspy.Polygon(vertices, 1, layer=0, datatype=0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Polygon.__init__() got multiple values for argument 'layer'

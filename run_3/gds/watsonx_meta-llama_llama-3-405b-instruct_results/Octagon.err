@@ -1,0 +1,7 @@
+Error in Octagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpcq697oeu/temp_script.py", line 13, in <module>
+    x = center[0] + edge_length / 2 * (1 + 1/1.4142135623730951) * (math.cos(angle))
+                                                                    ^^^^
+NameError: name 'math' is not defined

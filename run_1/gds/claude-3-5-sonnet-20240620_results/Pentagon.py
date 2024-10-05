@@ -1,0 +1,1 @@
+raise Exception('LLM made mistake by assuming (GDS units)=nanometers, but it should be (GDS units)=micrometers. The result coordination is out of bound to draw.')

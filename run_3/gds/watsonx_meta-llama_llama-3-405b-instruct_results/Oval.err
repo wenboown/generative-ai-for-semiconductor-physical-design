@@ -1,0 +1,6 @@
+Error in Oval.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp_146xw87/temp_script.py", line 30, in <module>
+    gdspy.write_gds('oval.gds', cell=cell)
+TypeError: write_gds() got an unexpected keyword argument 'cell'

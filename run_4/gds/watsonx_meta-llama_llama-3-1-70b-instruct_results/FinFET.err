@@ -1,0 +1,7 @@
+Error in FinFET.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpzomg_mlb/temp_script.py", line 4, in <module>
+    lib = gdspy.Library()
+          ^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Library'. Did you mean: 'library'?

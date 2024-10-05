@@ -1,0 +1,7 @@
+# watsonx:
+WATSONX_URL=https://us-south.ml.cloud.ibm.com
+WATSONX_APIKEY=xxx
+WATSONX_PROJECT_ID=xxx
+# other:
+OPENAI_API_KEY=sk-xxx
+ANTHROPIC_API_KEY=sk-xxx

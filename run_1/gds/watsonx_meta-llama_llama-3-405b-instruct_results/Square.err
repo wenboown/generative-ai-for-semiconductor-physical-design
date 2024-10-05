@@ -1,0 +1,10 @@
+Error in Square.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpv8d9q7uj/temp_script.py", line 9, in <module>
+    square = gdspy.Rectangle(-square_width, -square_width, 0, 0)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 628, in __init__
+    [point1[0], point1[1]],
+     ~~~~~~^^^
+TypeError: 'int' object is not subscriptable

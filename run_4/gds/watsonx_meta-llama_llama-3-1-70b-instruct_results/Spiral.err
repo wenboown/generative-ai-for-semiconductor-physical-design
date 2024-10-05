@@ -1,0 +1,6 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp_j2xt6c6/temp_script.py", line 22, in <module>
+    path.segment((x[i], y[i]), relative=False)
+TypeError: Path.segment() got an unexpected keyword argument 'relative'

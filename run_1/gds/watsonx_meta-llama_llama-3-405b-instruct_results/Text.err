@@ -1,0 +1,7 @@
+Error in Text.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp3oaa7wqc/temp_script.py", line 17, in <module>
+    text_element = gdspy.Text(text, center, size=height, align='center')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got multiple values for argument 'size'

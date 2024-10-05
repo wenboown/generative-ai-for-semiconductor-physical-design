@@ -1,0 +1,12 @@
+Error in MicrofluidicChip.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp1ldh50ei/temp_script.py", line 20, in <module>
+    channel.scale((1, 1), (1e3, 9e3))
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 171, in scale
+    self.polygons = [(points - c0) * s + c0 for points in self.polygons]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 171, in <listcomp>
+    self.polygons = [(points - c0) * s + c0 for points in self.polygons]
+                     ~~~~~~~~~~~~~~^~~
+ValueError: operands could not be broadcast together with shapes (4,2) (2,2) 

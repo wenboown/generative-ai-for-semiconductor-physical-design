@@ -1,0 +1,7 @@
+Error in RectangleWithText.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp4usl0sr5/temp_script.py", line 27, in <module>
+    text = gdspy.Text(text_string, text_size, position=rect_center, anchor='cc', layer=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'anchor'

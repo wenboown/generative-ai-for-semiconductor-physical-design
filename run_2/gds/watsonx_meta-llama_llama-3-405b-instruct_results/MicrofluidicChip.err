@@ -1,0 +1,12 @@
+Error in MicrofluidicChip.gds:
+
+/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py:769: RuntimeWarning: invalid value encountered in arccos
+  1 + int(0.5 * full_angle / numpy.arccos(1 - tolerance / radius) + 0.5),
+Traceback (most recent call last):
+  File "/tmp/tmpallpcrdb/temp_script.py", line 12, in <module>
+    via1 = gdspy.Round((10e-3, 10e-3), 2e-3, layer=2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 769, in __init__
+    1 + int(0.5 * full_angle / numpy.arccos(1 - tolerance / radius) + 0.5),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer

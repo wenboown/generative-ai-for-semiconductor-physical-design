@@ -1,0 +1,7 @@
+Error in DLDChip.gds:
+
+Traceback (most recent call last):
+  File "/var/folders/29/g4qw7yqd7r72_1d_ps3zjfvc0000gn/T/tmp71d6xi0a/temp_script.py", line 30, in <module>
+    outlet = gdspy.Round((num_pillars_width * (pillar_diameter + gap_size), 0), outlet_outlet_diameter / 2)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'outlet_outlet_diameter' is not defined. Did you mean: 'inlet_outlet_diameter'?

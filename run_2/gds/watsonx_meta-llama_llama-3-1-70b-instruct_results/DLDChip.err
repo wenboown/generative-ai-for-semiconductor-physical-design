@@ -1,0 +1,6 @@
+Error in DLDChip.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpdqim3_6w/temp_script.py", line 48, in <module>
+    lib.write_gds('dld_chip.gds', unit=1e-6, precision=1e-9)
+TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit'

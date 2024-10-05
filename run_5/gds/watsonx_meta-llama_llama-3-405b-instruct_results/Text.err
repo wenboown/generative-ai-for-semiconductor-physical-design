@@ -1,0 +1,6 @@
+Error in Text.gds:
+
+  File "/tmp/tmptu99388r/temp_script.py", line 14
+    font = gdspy TribeFont(name='default', size=height*0.6)
+                 ^^^^^^^^^
+SyntaxError: invalid syntax

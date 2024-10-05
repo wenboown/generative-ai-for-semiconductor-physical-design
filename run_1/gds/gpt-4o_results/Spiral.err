@@ -1,0 +1,6 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpxoqx5cw7/temp_script.py", line 23, in <module>
+    path.segment([(x_point, y_point)], width=1, relative=False)
+TypeError: Path.segment() got an unexpected keyword argument 'width'

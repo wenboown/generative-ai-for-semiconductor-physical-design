@@ -1,0 +1,7 @@
+Error in Text.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmproamlwgs/temp_script.py", line 20, in <module>
+    text_polygons = gdspy.translate(text_polygons, -center_x, -center_y)
+                    ^^^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'translate'

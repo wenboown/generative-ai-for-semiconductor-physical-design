@@ -1,0 +1,10 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp_2u2z6g9/temp_script.py", line 20, in <module>
+    spiral = gdspy.Path(line_width, [(x[0], y[0])])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 1075, in __init__
+    self.y = initial_point[1]
+             ~~~~~~~~~~~~~^^^
+IndexError: list index out of range

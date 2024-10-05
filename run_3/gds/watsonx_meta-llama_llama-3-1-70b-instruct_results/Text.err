@@ -1,0 +1,7 @@
+Error in Text.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpyzc0aarw/temp_script.py", line 11, in <module>
+    text.translate(-text.get_bounding_box().center[0], -text.get_bounding_box().center[1])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'center'

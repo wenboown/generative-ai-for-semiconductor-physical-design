@@ -1,0 +1,118 @@
+Error Analysis Report
+=====================
+
+LLM: gpt-4o
+-----------
+Total errors: 18
+
+- TypeError: Text.__init__() got an unexpected keyword argument 'anchor': 3 (16.67%)
+- SyntaxError: invalid syntax: 3 (16.67%)
+- TypeError: 'float' object cannot be interpreted as an integer: 2 (11.11%)
+- TypeError: Path.segment() got an unexpected keyword argument 'relative': 1 (5.56%)
+- AttributeError: 'GdsLibrary' object has no attribute 'to_gds': 1 (5.56%)
+- IndexError: invalid index to scalar variable.: 1 (5.56%)
+- AttributeError: 'Label' object has no attribute 'get_bounding_box': 1 (5.56%)
+- TypeError: can only concatenate tuple (not "int") to tuple: 1 (5.56%)
+- TypeError: Path.segment() got an unexpected keyword argument 'final_point': 1 (5.56%)
+- ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.: 1 (5.56%)
+- AttributeError: module 'gdspy' has no attribute 'pi': 1 (5.56%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'vertical': 1 (5.56%)
+- TypeError: Path.segment() got an unexpected keyword argument 'width': 1 (5.56%)
+
+LLM: watsonx_meta-llama_llama-3-405b-instruct
+---------------------------------------------
+Total errors: 36
+
+- TypeError: 'int' object is not subscriptable: 3 (8.33%)
+- SyntaxError: invalid syntax: 3 (8.33%)
+- ValueError: cannot convert float NaN to integer: 2 (5.56%)
+- TypeError: Polygon.__init__() got multiple values for argument 'layer': 2 (5.56%)
+- TypeError: Cell.add() got an unexpected keyword argument 'layer': 2 (5.56%)
+- AttributeError: 'GdsLibrary' object has no attribute 'gdsii': 2 (5.56%)
+- TypeError: Path.__init__() got an unexpected keyword argument 'layer': 2 (5.56%)
+- ValueError: operands could not be broadcast together with shapes (128,) (2,): 1 (2.78%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'font': 1 (2.78%)
+- TypeError: unsupported operand type(s) for /: 'tuple' and 'float': 1 (2.78%)
+- AttributeError: 'Rectangle' object has no attribute 'set_layer': 1 (2.78%)
+- TypeError: Label.__init__() got an unexpected keyword argument 'size': 1 (2.78%)
+- TypeError: Round.__init__() got an unexpected keyword argument 'size': 1 (2.78%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'height': 1 (2.78%)
+- ValueError: operands could not be broadcast together with shapes (1000,) (2,): 1 (2.78%)
+- TypeError: Path.__init__() got an unexpected keyword argument 'nr_points': 1 (2.78%)
+- AttributeError: 'Rectangle' object has no attribute 'size': 1 (2.78%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'anchor': 1 (2.78%)
+- ValueError: operands could not be broadcast together with shapes (4,2) (2,2): 1 (2.78%)
+- TypeError: write_gds() got an unexpected keyword argument 'cell': 1 (2.78%)
+- NameError: name 'math' is not defined: 1 (2.78%)
+- Exception: This python code runs into dead loops.: 1 (2.78%)
+- TypeError: Round.__init__() got multiple values for argument 'inner_radius': 1 (2.78%)
+- TypeError: 'list' object is not callable: 1 (2.78%)
+- TypeError: Text.__init__() got multiple values for argument 'size': 1 (2.78%)
+- TypeError: 'float' object is not subscriptable: 1 (2.78%)
+- TypeError: Operation must be one of 'or', 'and', 'xor', 'not'.: 1 (2.78%)
+
+LLM: o1-preview
+---------------
+Total errors: 12
+
+- TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit': 2 (16.67%)
+- SyntaxError: invalid syntax: 2 (16.67%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'vertical': 1 (8.33%)
+- TypeError: 'int' object is not callable: 1 (8.33%)
+- AttributeError: 'NoneType' object has no attribute 'add': 1 (8.33%)
+- AttributeError: module 'gdspy' has no attribute 'translate': 1 (8.33%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'anchor': 1 (8.33%)
+- AttributeError: module 'gdspy' has no attribute 'Ellipse': 1 (8.33%)
+- TypeError: Path.parametric() got an unexpected keyword argument 't_max': 1 (8.33%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'horizontal_alignment': 1 (8.33%)
+
+LLM: watsonx_meta-llama_llama-3-1-70b-instruct
+----------------------------------------------
+Total errors: 68
+
+- AttributeError: module 'gdspy' has no attribute 'Library'. Did you mean: 'library'?: 25 (36.76%)
+- TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit': 5 (7.35%)
+- SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?: 4 (5.88%)
+- struct.error: required argument is not an integer: 3 (4.41%)
+- TypeError: Round.__init__() got an unexpected keyword argument 'num_points': 3 (4.41%)
+- AttributeError: 'GdsLibrary' object has no attribute 'new_layer': 3 (4.41%)
+- TypeError: Path.__init__() got an unexpected keyword argument 'layer': 2 (2.94%)
+- AttributeError: module 'gdspy' has no attribute 'ellipse': 2 (2.94%)
+- IndexError: list index out of range: 2 (2.94%)
+- AttributeError: module 'gdspy' has no attribute 'Circle': 2 (2.94%)
+- TypeError: Rectangle.__init__() got an unexpected keyword argument 'width': 1 (1.47%)
+- TypeError: Text.__init__() got multiple values for argument 'size': 1 (1.47%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'font': 1 (1.47%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'x': 1 (1.47%)
+- NameError: name 'contact' is not defined: 1 (1.47%)
+- TypeError: Cell.add() takes 2 positional arguments but 101 were given: 1 (1.47%)
+- NameError: name 'math' is not defined: 1 (1.47%)
+- TypeError: Path.__init__() got multiple values for argument 'width': 1 (1.47%)
+- TypeError: Text.__init__() got an unexpected keyword argument 'Center': 1 (1.47%)
+- TypeError: Path.segment() got an unexpected keyword argument 'relative': 1 (1.47%)
+- AttributeError: 'numpy.ndarray' object has no attribute 'center': 1 (1.47%)
+- AttributeError: module 'gdspy' has no attribute 'Cross': 1 (1.47%)
+- TypeError: 'int' object is not subscriptable: 1 (1.47%)
+- SyntaxError: invalid syntax: 1 (1.47%)
+- TypeError: PolygonSet.to_gds() got an unexpected keyword argument 'timestamp': 1 (1.47%)
+- AttributeError: module 'gdspy' has no attribute 'Circular': 1 (1.47%)
+- AttributeError: module 'gdspy' has no attribute 'TextGenerator': 1 (1.47%)
+
+LLM: claude-3-5-sonnet-20240620
+-------------------------------
+Total errors: 21
+
+- TypeError: Text.__init__() got an unexpected keyword argument 'anchor': 8 (38.10%)
+- TypeError: Path.__init__() got an unexpected keyword argument 'layer': 2 (9.52%)
+- ValueError: cannot convert float NaN to integer: 1 (4.76%)
+- AttributeError: 'Cell' object has no attribute 'center': 1 (4.76%)
+- TypeError: object of type 'PolygonSet' has no len(): 1 (4.76%)
+- TypeError: Round.__init__() got an unexpected keyword argument 'major_axis': 1 (4.76%)
+- TypeError: object of type 'Round' has no len(): 1 (4.76%)
+- AttributeError: module 'gdspy' has no attribute 'text'. Did you mean: 'Text'?: 1 (4.76%)
+- AttributeError: module 'gdspy' has no attribute 'CrossSection': 1 (4.76%)
+- AttributeError: 'Polygon' object has no attribute 'holes': 1 (4.76%)
+- AttributeError: module 'gdspy' has no attribute 'PathPolygon': 1 (4.76%)
+- AttributeError: module 'gdspy' has no attribute 'round_corners': 1 (4.76%)
+- Exception: LLM made mistake by assuming (GDS units)=nanometers, but it should be (GDS units)=micrometers. The result coordination is out of bound to draw.: 1 (4.76%)
+

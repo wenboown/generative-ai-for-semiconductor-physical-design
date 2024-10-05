@@ -1,0 +1,6 @@
+Error in FinFET.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpltjv596k/temp_script.py", line 23, in <module>
+    cell.add(fin, layer=fin_layer)
+TypeError: Cell.add() got an unexpected keyword argument 'layer'

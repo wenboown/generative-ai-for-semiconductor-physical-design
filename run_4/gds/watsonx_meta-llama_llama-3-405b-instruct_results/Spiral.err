@@ -1,0 +1,19 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmptg_71zng/temp_script.py", line 24, in <module>
+    lib.write_gds('spiral.gds')
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2503, in write_gds
+    cell.to_gds(outfile, self.unit / self.precision, timestamp=timestamp)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 173, in to_gds
+    path.to_gds(outfile, multiplier)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/path.py", line 965, in to_gds
+    self.to_polygonset().to_gds(outfile, multiplier)
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/path.py", line 933, in to_polygonset
+    polygons = self.get_polygons(True)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/path.py", line 414, in get_polygons
+    un = un[::-1] * _mpone / (un[0] ** 2 + un[1] ** 2) ** 0.5
+         ~~~~~~~~~^~~~~~~~
+ValueError: operands could not be broadcast together with shapes (1000,) (2,) 

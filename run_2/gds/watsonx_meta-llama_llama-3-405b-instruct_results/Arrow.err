@@ -1,0 +1,10 @@
+Error in Arrow.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpsv0nonis/temp_script.py", line 22, in <module>
+    arrow_body = gdspy.Rectangle(0, -body_width/2, arrow_length - head_width, body_width/2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 628, in __init__
+    [point1[0], point1[1]],
+     ~~~~~~^^^
+TypeError: 'int' object is not subscriptable

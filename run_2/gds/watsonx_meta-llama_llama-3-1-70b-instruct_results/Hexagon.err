@@ -1,0 +1,12 @@
+Error in Hexagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpx1dd62e4/temp_script.py", line 26, in <module>
+    lib.write_gds("hexagon.gds")
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2503, in write_gds
+    cell.to_gds(outfile, self.unit / self.precision, timestamp=timestamp)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 171, in to_gds
+    polygon.to_gds(outfile, multiplier)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 218, in to_gds
+    struct.pack(
+struct.error: required argument is not an integer

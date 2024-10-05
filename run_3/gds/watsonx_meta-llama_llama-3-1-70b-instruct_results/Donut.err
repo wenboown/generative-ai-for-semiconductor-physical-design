@@ -1,0 +1,7 @@
+Error in Donut.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpeccxdlo6/temp_script.py", line 15, in <module>
+    outer_circle = gdspy.Circle((0, 0), outer_radius, max_points=360, layer=0)
+                   ^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Circle'

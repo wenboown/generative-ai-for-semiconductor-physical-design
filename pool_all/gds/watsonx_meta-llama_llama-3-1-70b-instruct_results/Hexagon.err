@@ -1,0 +1,7 @@
+Error in Hexagon.gds:
+
+Traceback (most recent call last):
+  File "/var/folders/29/g4qw7yqd7r72_1d_ps3zjfvc0000gn/T/tmppjkfcb5e/temp_script.py", line 13, in <module>
+    angle = math.pi / 3 * i
+            ^^^^
+NameError: name 'math' is not defined

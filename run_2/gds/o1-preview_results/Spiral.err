@@ -1,0 +1,12 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpbka5oe9u/temp_script.py", line 30, in <module>
+    path.parametric(
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 1728, in parametric
+    derivs = numpy.array([curve_derivative(u) for u in points])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 1728, in <listcomp>
+    derivs = numpy.array([curve_derivative(u) for u in points])
+                          ^^^^^^^^^^^^^^^^^^^
+TypeError: 'int' object is not callable

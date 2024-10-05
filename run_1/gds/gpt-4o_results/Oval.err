@@ -1,0 +1,10 @@
+Error in Oval.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp8vgy4k5v/temp_script.py", line 24, in <module>
+    oval = gdspy.FlexPath([oval_points, oval_points[-1]], 0, layer=layer, datatype=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/path.py", line 330, in __init__
+    self.points = numpy.array(points)
+                  ^^^^^^^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.

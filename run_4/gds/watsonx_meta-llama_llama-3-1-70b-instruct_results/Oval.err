@@ -1,0 +1,7 @@
+Error in Oval.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpfaqdwbvk/temp_script.py", line 8, in <module>
+    oval = gdspy.ellipse(0, 0, 20/2, 13/2, layer=0, number_of_points=64)
+           ^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'ellipse'

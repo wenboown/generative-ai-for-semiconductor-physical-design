@@ -1,0 +1,7 @@
+Error in ViaConnection.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmphq9faekx/temp_script.py", line 8, in <module>
+    via_layer = lib.new_layer(0, 'via')
+                ^^^^^^^^^^^^^
+AttributeError: 'GdsLibrary' object has no attribute 'new_layer'

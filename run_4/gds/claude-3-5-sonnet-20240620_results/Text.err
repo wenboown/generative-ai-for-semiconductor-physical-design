@@ -1,0 +1,7 @@
+Error in Text.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpzqsj1ca9/temp_script.py", line 16, in <module>
+    text_size = gdspy.text(text, height, position=(0, 0))
+                ^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'text'. Did you mean: 'Text'?

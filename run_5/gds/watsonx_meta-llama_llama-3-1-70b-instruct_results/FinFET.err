@@ -1,0 +1,7 @@
+Error in FinFET.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp2rghdzpl/temp_script.py", line 16, in <module>
+    fin_layer = lib.new_layer(1, 'Fin')
+                ^^^^^^^^^^^^^
+AttributeError: 'GdsLibrary' object has no attribute 'new_layer'

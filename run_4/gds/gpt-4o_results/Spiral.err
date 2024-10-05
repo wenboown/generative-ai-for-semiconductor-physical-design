@@ -1,0 +1,9 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpyvn521it/temp_script.py", line 20, in <module>
+    spiral_path.segment((xi, yi), final_width=line_width)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 1293, in segment
+    self.x += length * ca + axis_offset * sa
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate tuple (not "int") to tuple

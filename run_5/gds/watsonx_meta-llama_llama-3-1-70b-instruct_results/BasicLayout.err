@@ -1,0 +1,7 @@
+Error in BasicLayout.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp2_p3zwig/temp_script.py", line 10, in <module>
+    lib = gdspy.Library()
+          ^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Library'. Did you mean: 'library'?

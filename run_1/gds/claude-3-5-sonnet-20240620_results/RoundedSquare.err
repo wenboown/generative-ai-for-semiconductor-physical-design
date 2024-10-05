@@ -1,0 +1,7 @@
+Error in RoundedSquare.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpiaai6vzm/temp_script.py", line 21, in <module>
+    rounded_square = gdspy.round_corners(square, radius)
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'round_corners'

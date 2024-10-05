@@ -1,0 +1,7 @@
+Error in Heptagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp92ymf03v/temp_script.py", line 5, in <module>
+    lib = gdspy.Library()
+          ^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Library'. Did you mean: 'library'?

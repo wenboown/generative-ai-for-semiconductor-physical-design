@@ -1,0 +1,7 @@
+Error in BasicLayout.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmptcrnvw67/temp_script.py", line 17, in <module>
+    contact.spacing = 1
+    ^^^^^^^
+NameError: name 'contact' is not defined

@@ -1,0 +1,7 @@
+Error in RectangleWithText.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpk3x8r0h5/temp_script.py", line 25, in <module>
+    text = gdspy.Text(text_string, (text_x, text_y), size=text_size, layer=text_layer, font='ROMAN')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got multiple values for argument 'size'

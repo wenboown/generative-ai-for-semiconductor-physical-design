@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpxluds0o4/temp_script.py", line 57, in <module>
+    text_row = gdspy.Text(
+               ^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'horizontal_alignment'

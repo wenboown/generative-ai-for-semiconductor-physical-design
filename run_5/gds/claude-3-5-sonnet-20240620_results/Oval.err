@@ -1,0 +1,7 @@
+Error in Oval.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp9amy2uv_/temp_script.py", line 18, in <module>
+    oval = gdspy.Round(
+           ^^^^^^^^^^^^
+TypeError: Round.__init__() got an unexpected keyword argument 'major_axis'

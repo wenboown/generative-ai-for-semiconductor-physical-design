@@ -1,0 +1,7 @@
+Error in Oval.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpst0t7d_h/temp_script.py", line 25, in <module>
+    cell.add(oval.layers(layer).translate(0, 0))
+             ^^^^^^^^^^^^^^^^^^
+TypeError: 'list' object is not callable

@@ -1,0 +1,6 @@
+Error in Circle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp0762qvsw/temp_script.py", line 25, in <module>
+    cell.add(poly, layer=layer, datatype=datatype)
+TypeError: Cell.add() got an unexpected keyword argument 'layer'

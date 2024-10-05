@@ -1,0 +1,7 @@
+Error in Text.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpd76ubb75/temp_script.py", line 8, in <module>
+    text = gdspy.Text('Hello, GDS!', 5, (0, 0), layer=1, font='Roman')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'font'

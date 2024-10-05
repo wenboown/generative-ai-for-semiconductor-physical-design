@@ -1,0 +1,7 @@
+Error in Pentagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp0kw_lwuc/temp_script.py", line 29, in <module>
+    lib.gdsii.write_gds('pentagon.gds')
+    ^^^^^^^^^
+AttributeError: 'GdsLibrary' object has no attribute 'gdsii'

@@ -1,0 +1,6 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpqi5nkw5j/temp_script.py", line 19, in <module>
+    path.parametric(spiral, t_max=6 * numpy.pi, number_of_evaluations=1000)
+TypeError: Path.parametric() got an unexpected keyword argument 't_max'

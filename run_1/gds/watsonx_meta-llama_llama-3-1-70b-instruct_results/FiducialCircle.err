@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmppeb8jb5b/temp_script.py", line 22, in <module>
+    font = gdspy.TextGenerator('font', size=100,GBL='font')
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'TextGenerator'

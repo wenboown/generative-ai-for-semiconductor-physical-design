@@ -1,0 +1,15 @@
+Error in Donut.gds:
+Donut shape generated successfully in 'donut.gds'
+
+Traceback (most recent call last):
+  File "/var/folders/29/g4qw7yqd7r72_1d_ps3zjfvc0000gn/T/tmpjbhj3iww/temp_script.py", line 41, in <module>
+    cell = lib.new_cell('DONUT')
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bwen/personal/llm-layout/.venv/lib/python3.11/site-packages/gdspy/library.py", line 2326, in new_cell
+    cell = Cell(name)
+           ^^^^^^^^^^
+  File "/Users/bwen/personal/llm-layout/.venv/lib/python3.11/site-packages/gdspy/library.py", line 115, in __init__
+    gdspy.current_library.add(self, include_dependencies=False)
+  File "/Users/bwen/personal/llm-layout/.venv/lib/python3.11/site-packages/gdspy/library.py", line 2374, in add
+    raise ValueError(
+ValueError: [GDSPY] Cell named DONUT already present in library.

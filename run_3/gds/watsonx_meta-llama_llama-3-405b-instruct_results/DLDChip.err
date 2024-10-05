@@ -1,0 +1,6 @@
+Error in DLDChip.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp9ebq6xxz/temp_script.py", line 1, in <module>
+    raise Exception('This python code runs into dead loops.')
+Exception: This python code runs into dead loops.

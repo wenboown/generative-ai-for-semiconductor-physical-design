@@ -1,0 +1,7 @@
+Error in ViaConnection.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp3h8wy7s3/temp_script.py", line 9, in <module>
+    lib = gdspy.Library()
+          ^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Library'. Did you mean: 'library'?

@@ -1,0 +1,7 @@
+Error in MicrofluidicChip.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpdcmgluwu/temp_script.py", line 22, in <module>
+    channel_path = gdspy.Path(1e3, via1_center, layer=3)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.__init__() got an unexpected keyword argument 'layer'

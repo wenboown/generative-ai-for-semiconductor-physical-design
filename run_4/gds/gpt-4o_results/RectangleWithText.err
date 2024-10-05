@@ -1,0 +1,7 @@
+Error in RectangleWithText.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpgp4e1vti/temp_script.py", line 23, in <module>
+    bbox = gdspy.Label(text_string, (0, 0), layer=text_layer).get_bounding_box()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Label' object has no attribute 'get_bounding_box'

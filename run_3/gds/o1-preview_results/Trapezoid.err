@@ -1,0 +1,13 @@
+Error in Trapezoid.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp2ld_ebp4/temp_script.py", line 10, in <module>
+    cell = lib.new_cell('TRAPEZOID_CELL')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2326, in new_cell
+    cell = Cell(name)
+           ^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 115, in __init__
+    gdspy.current_library.add(self, include_dependencies=False)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'add'

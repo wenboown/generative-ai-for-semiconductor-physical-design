@@ -1,0 +1,820 @@
+created_by: watsonx/meta-llama/llama-3-1-70b-instruct
+seed_examples:
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the library and cell for the GDS layout
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''circle'')
+
+
+    # Define the layer for the circle
+
+    layer = 0
+
+
+    # Define the radius and center coordinates of the circle
+
+    radius = 10  # in microns (GDSII uses microns)
+
+    center_x, center_y = 0, 0
+
+
+    # Create the circle with precise coordinates
+
+    circle = gdspy.Round((center_x, center_y), radius, layer=layer, number_of_points=100)
+
+
+    # Add the circle to the cell
+
+    cell.add(circle)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''circle.gds'')
+
+    ```
+
+    This code generates a GDSII file named `circle.gds` containing a circle with a
+    radius of 10 microns (not millimeters, since GDSII uses microns) centered at (0,0)
+    on layer 0.'
+  context: Circle.gds
+  question: Write a Python code to generate GDSII for a circle on layer 0, radius
+    = 10 mm, center at 0,0.
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the library and cell for the GDS layout
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell("Donut Shape")
+
+
+    # Define the outer and inner radii
+
+    outer_radius = 10  # mm
+
+    inner_radius = 5  # mm
+
+
+    # Define the max distance between points for a smoother circle
+
+    max_dist = 0.01  # mm
+
+
+    # Create the outer circle
+
+    outer_circle = gdspy.Circle((0, 0), outer_radius, max_points=360, layer=0)
+
+
+    # Create the inner circle
+
+    inner_circle = gdspy.Circle((0, 0), inner_radius, max_points=360, layer=0)
+
+
+    # Subtract the inner circle from the outer circle to create the donut shape
+
+    donut_shape = gdspy.boolean(outer_circle, inner_circle, ''not'')
+
+
+    # Add the donut shape to the cell
+
+    cell.add(donut_shape)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds("donut_shape.gds")
+
+    ```'
+  context: Donut.gds
+  question: Generate a donut shape with 10 mm outer radius and 5 mm inner radius.
+    Make the circle smoother by setting max distance between point 0.01mm.
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the GDS library and cell
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''Oval'')
+
+
+    # Define the oval with major and minor axes
+
+    major_axis = 20
+
+    minor_axis = 13
+
+    center = (0, 0)
+
+    layer = 0
+
+
+    # Create an oval shape using the gdspy.Round function
+
+    oval = gdspy.Round(center, [major_axis/2, minor_axis/2], layer=layer)
+
+
+    # Add the oval shape to the cell
+
+    cell.add(oval)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''oval.gds'')
+
+    ```'
+  context: Oval.gds
+  question: Generate an oval with major axis of 20 mm, minor axis of 13 mm, on layer
+    0, center at 0,0.
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the GDS library and cell
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''square_design'')
+
+
+    # Define the square with precise coordinates
+
+    width = 10  # width in mm
+
+    square = gdspy.Rectangle((0, 0), (width, width), layer=1)  # lower right corner
+    at 0,0
+
+
+    # Add the square to the cell
+
+    cell.add(square)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''square_design.gds'')
+
+    ```'
+  context: Square.gds
+  question: Generate a square with width 10 mm, put lower right corner of the square
+    at 0,0.
+- answer: '```python
+
+    # Import the gdspy library
+
+    import gdspy
+
+
+    # Define the library and cell for the GDS layout
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''triangle'')
+
+
+    # Define the coordinates for the triangle
+
+    x, y = 0, 0  # Center of the triangle
+
+    edge_length = 10e3  # Length of each edge in units of microns
+
+
+    # Calculate the coordinates of the triangle vertices
+
+    x1, y1 = x - edge_length/2, y - edge_length*3**0.5/6
+
+    x2, y2 = x + edge_length/2, y - edge_length*3**0.5/6
+
+    x3, y3 = x, y + edge_length*3**0.5/3
+
+
+    # Create a polygon with the triangle vertices
+
+    triangle = gdspy.Polygon([(x1, y1), (x2, y2), (x3, y3)])
+
+
+    # Add the triangle to the cell
+
+    cell.add(triangle)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''triangle.gds'')
+
+    ```'
+  context: Triangle.gds
+  question: Generate a triangle with each edge 10 mm, center at 0,0.
+- answer: '```python
+
+    import gdspy
+
+    import numpy as np
+
+
+    # Define the library and cell for the GDS layout
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''Heptagon'')
+
+
+    # Define the center of the heptagon
+
+    center = (0, 0)
+
+
+    # Define the edge length and number of sides of the heptagon
+
+    edge_length = 10
+
+    num_sides = 7
+
+
+    # Calculate the radius of the circumscribed circle
+
+    radius = edge_length / (2 * np.sin(np.pi / num_sides))
+
+
+    # Calculate the coordinates of the heptagon corners
+
+    angles = np.linspace(0, 2 * np.pi, num_sides, endpoint=False)
+
+    corners = [(center[0] + radius * np.cos(angle), center[1] + radius * np.sin(angle))
+    for angle in angles]
+
+
+    # Create the heptagon polygon
+
+    heptagon = gdspy.Polygon(corners, layer=1, datatype=0)
+
+
+    # Add the heptagon to the cell
+
+    cell.add(heptagon)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''heptagon.gds'')
+
+    ```'
+  context: Heptagon.gds
+  question: Generate a Heptagon with each edge 10 mm, center at 0,0.
+- answer: '```python
+
+    import gdspy
+
+    import numpy as np
+
+
+    # Define the library and cell for the GDS layout
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''Octagon'')
+
+
+    # Define the Octagon parameters
+
+    edge_length = 10  # mm
+
+    center = (0, 0)  # mm
+
+
+    # Calculate the coordinates of the Octagon
+
+    angle = np.linspace(0, 2*np.pi, 9, endpoint=False)[1:]  # 8 edges, starting from
+    1st point (not 0)
+
+    points = [(center[0] + edge_length/2*np.cos(a), center[1] + edge_length/2*np.sin(a))
+    for a in angle]
+
+
+    # Add the Octagon to the cell
+
+    octagon = gdspy.Polygon(points, layer=1)
+
+    cell.add(octagon)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''octagon.gds'')
+
+    ```'
+  context: Octagon.gds
+  question: Generate an Octagon with each edge 10 mm, center at 0,0.
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the GDS library and cell
+
+    gds_lib = gdspy.Library()
+
+    gds_cell = gds_lib.new_cell(''Trapezoid'')
+
+
+    # Define the geometric parameters
+
+    upper_edge = 10
+
+    lower_edge = 20
+
+    height = 8
+
+    center_x = 0
+
+    center_y = 0
+
+
+    # Calculate the x-coordinates of the trapezoid''s vertices
+
+    x1 = center_x - (upper_edge / 2)
+
+    x2 = center_x + (upper_edge / 2)
+
+    x3 = center_x + (lower_edge / 2)
+
+    x4 = center_x - (lower_edge / 2)
+
+
+    # Calculate the y-coordinates of the trapezoid''s vertices
+
+    y1 = center_y + (height / 2)
+
+    y2 = center_y + (height / 2)
+
+    y3 = center_y - (height / 2)
+
+    y4 = center_y - (height / 2)
+
+
+    # Create the trapezoid''s vertices
+
+    vertices = [(x1, y1), (x2, y2), (x3, y3), (x4, y4)]
+
+
+    # Create the trapezoid polygon
+
+    trapezoid = gdspy.Polygon(vertices, 1)
+
+
+    # Add the trapezoid to the cell
+
+    gds_cell.add(trapezoid)
+
+
+    # Save the GDS layout
+
+    gds_lib.write_gds(''trapezoid.gds'')
+
+    ```'
+  context: Trapezoid.gds
+  question: Generate a Trapezoid with upper edge 10 mm, lower edge 20 mm, height 8
+    mm, center at 0,0.
+- answer: "```python\nimport gdspy\n\n# Define the library and cell for the GDS layout\n\
+    lib = gdspy.GdsLibrary()\ncell = lib.new_cell('Arrow')\n\n# Define the arrow dimensions\n\
+    length = 10  # mm\nhead_width = 2  # mm\nbody_width = head_width / 3  # mm\n\n\
+    # Create the arrow head\nhead = gdspy.Polygon([\n    (length, head_width/2),\n\
+    \    (length+1, head_width/2),\n    (length+0.5, head_width),\n    (length+1,\
+    \ -head_width/2),\n    (length, -head_width/2),\n    (length-0.5, 0),\n    (length,\
+    \ head_width/2)\n], layer=0)\n\n# Create the arrow body\nbody = gdspy.Polygon([\n\
+    \    (0, body_width/2),\n    (0, -body_width/2),\n    (length-1, -body_width/2),\n\
+    \    (length-1, body_width/2),\n    (0, body_width/2)\n], layer=0)\n\n# Add the\
+    \ arrow head and body to the cell\ncell.add(head)\ncell.add(body)\n\n# Save the\
+    \ design to a GDS file\nlib.write_gds('arrow.gds')\n```"
+  context: Arrow.gds
+  question: Generate an Arrow pointing to the right with length 10 mm, make the body
+    1/3 width of the head, start at 0,0.
+- answer: "```python\nimport gdspy\n\n# Define the library and cell for the GDS layout\n\
+    lib = gdspy.Library()\ncell = lib.new_cell('square_array')\n\n# Define the size\
+    \ of the square and spacing\nsquare_size = 5  # mm\nspacing = 20  # mm\n\n# Calculate\
+    \ the total size of the array\narray_size_x = 10 * (square_size + spacing)\narray_size_y\
+    \ = 10 * (square_size + spacing)\n\n# Create the square array\nfor i in range(10):\n\
+    \    for j in range(10):\n        # Calculate the position of the square\n   \
+    \     x = i * (square_size + spacing)\n        y = j * (square_size + spacing)\n\
+    \        \n        # Create the square\n        sq = gdspy.Rectangle((x, y), (x\
+    \ + square_size, y + square_size))\n        \n        # Add the square to the\
+    \ cell\n        cell.add(sq)\n\n# Save the design to a GDS file\nlib.write_gds('square_array.gds')\n\
+    ```\nThis code generates a 10x10 square array with 5mmx5mm squares, spaced 20mm\
+    \ apart, with the lower left corner of the upper right square at (0,0). It uses\
+    \ the `gdspy` library to create the GDS layout and saves it to a file named `square_array.gds`."
+  context: SquareArray.gds
+  question: Generate a square array with 5*5 mm square, for 10 columns and 10 rows,
+    each 20 mm apart, the lower left corner of the upper right square is at 0,0.
+- answer: "```python\nimport gdspy\n\n# Parse the user's design specifications\ngrid_layer\
+    \ = 1\ndatatype = 4\ngrid_size = 5\ntotal_width = 200\ntotal_height = 400\nx-coordinate\
+    \ = 100\ny-coordinate = 800\n\n# Define the library and cell for the GDS layout\n\
+    lib = gdspy.GdsLibrary(prefix=\"GRID\")\ncell = lib.new_cell(\"GRID\")\n\n# Create\
+    \ each geometric element (e.g., rectangles, polygons) with precise coordinates\n\
+    # Calculate number of cells in grid\nnum_cells_x = int(total_width / grid_size)\n\
+    num_cells_y = int(total_height / grid_size)\n\n# Loop through each cell and create\
+    \ a rectangle\nfor i in range(num_cells_x):\n    for j in range(num_cells_y):\n\
+    \        x = x_coordinate + (i * grid_size)\n        y = y_coordinate + (j * grid_size)\n\
+    \        rect = gdspy.Rectangle((x, y), (x + grid_size, y + grid_size), layer=grid_layer,\
+    \ datatype=datatype)\n        cell.add(rect)\n\n# Save the design to a GDS file\n\
+    lib.write_gds(\"grid_layout.gds\")\n```"
+  context: Grid.gds
+  question: "Draw the GDSII for a grid: Grid on Layer 1, DATATYPE 4, 5 \xB5m grid,\
+    \ and total width is 200 \xB5m and height is 400 \xB5m, placed at coordinates\
+    \ (100,800) nanometers."
+- answer: "```python\nimport gdspy\n\n# Define the design parameters\npath_width =\
+    \ 1\nnum_turns = 15\nsegment_length = 50\nsegment_height = 50\nstart_position\
+    \ = (0, 0)\nlayer = 2\ndatatype = 6\n\n# Create a new library and cell\nlib =\
+    \ gdspy.GdsLibrary()\ncell = lib.new_cell('serpentine_pattern')\n\n# Initialize\
+    \ the current position\nx, y = start_position\n\n# Draw the serpentine pattern\n\
+    for i in range(num_turns):\n    # Draw a horizontal segment\n    rect = gdspy.Rectangle((x,\
+    \ y), (x + segment_length, y + path_width), layer=layer, datatype=datatype)\n\
+    \    cell.add(rect)\n    x += segment_length\n    \n    # Draw a vertical segment\n\
+    \    rect = gdspy.Rectangle((x, y), (x + path_width, y + segment_height), layer=layer,\
+    \ datatype=datatype)\n    cell.add(rect)\n    y += segment_height\n    \n    #\
+    \ Draw a horizontal segment\n    rect = gdspy.Rectangle((x, y), (x - segment_length,\
+    \ y + path_width), layer=layer, datatype=datatype)\n    cell.add(rect)\n    x\
+    \ -= segment_length\n    \n    # Draw a vertical segment\n    rect = gdspy.Rectangle((x,\
+    \ y), (x - path_width, y + segment_height), layer=layer, datatype=datatype)\n\
+    \    cell.add(rect)\n    y += segment_height\n\n# Save the design to a GDS file\n\
+    lib.write_gds('serpentine_pattern.gds')\n```"
+  context: Serpentine.gds
+  question: "Generate a serpentine pattern with a path width of 1 \xB5m, 15 turns,\
+    \ each segment being 50 \xB5m long and tall, starting at (0,0), on layer 2, datatype\
+    \ 6."
+- answer: "```python\nimport gdspy\n\n# Define the design parameters\nsize = 10  #\
+    \ mm\nradius = 1  # mm\n\n# Create a new GDS library and cell\nlib = gdspy.Library()\n\
+    cell = lib.new_cell(\"Square\")\n\n# Create a square with rounded corners\npts\
+    \ = [\n    (-size/2, -size/2+radius),\n    (-size/2+radius, -size/2),\n    (size/2-radius,\
+    \ -size/2),\n    (size/2, -size/2+radius),\n    (size/2, size/2-radius),\n   \
+    \ (size/2-radius, size/2),\n    (-size/2+radius, size/2),\n    (-size/2, size/2-radius),\n\
+    \    (-size/2, -size/2+radius)\n]\nsquare = gdspy.Polygon(pts, 1)\n\n# Add the\
+    \ square to the cell\ncell.add(square)\n\n# Save the design to a GDS file\nlib.write_gds(\"\
+    rounded_square.gds\")\n```\nThis code creates a 10x10 mm square with rounded corners\
+    \ (radius = 1 mm) and saves it to a GDS file named \"rounded_square.gds\". The\
+    \ `gdspy.Polygon` function is used to create the square with rounded corners by\
+    \ specifying the coordinates of the polygon points."
+  context: RoundedSquare.gds
+  question: Draw a 10*10 mm square, and do corner rounding for each corner with r=1
+    mm.
+- answer: "```python\nimport gdspy\n\n# Define the library and cell for the GDS layout\n\
+    lib = gdspy.GdsLibrary()\ncell = lib.new_cell('IBM_Research_Cell')\n\n# Parse\
+    \ the user's design specifications and create the rectangle\nrectangle = gdspy.Rectangle(\n\
+    \    (0, -5), (30, 5), \n    layer = 0\n)\n\n# Add the rectangle to the cell\n\
+    cell.add(rectangle)\n\n# Create the text at the center of the rectangle\ntext\
+    \ = gdspy.Text(\n    'IBM Research', \n    10, \n    (15, 0), \n    layer = 1\n\
+    )\n\n# Add the text to the cell\ncell.add(text)\n\n# Save the design to a GDS\
+    \ file\nlib.write_gds('IBM_Research.gds')\n```"
+  context: RectangleWithText.gds
+  question: Generate a GDS with a 30*10 mm rectangle on layer 0 with a text "IBM Research"
+    at the center of the rectangle. Put the text on layer 1.
+- answer: "```python\nimport numpy as np\nimport gdspy\n\n# Create a new library and\
+    \ cell\nlib = gdspy.GdsLibrary()\ncell = lib.new_cell('spiral')\n\n# Define the\
+    \ parameters\nt_min = 0\nt_max = 6 * np.pi\nline_width = 1\n\n# Generate the spiral\
+    \ coordinates\nt = np.linspace(t_min, t_max, 1000)\nr = np.exp(-0.1 * t)\nx =\
+    \ r * np.cos(t)\ny = r * np.sin(t)\n\n# Create the spiral path\nspiral = gdspy.Path(line_width,\
+    \ [(x[0], y[0])])\nfor i in range(1, len(x)):\n    spiral.segment([(x[i], y[i])],\
+    \ relative=True, **{'layer': 1, 'datatype': 0})\n\n# Add the spiral to the cell\n\
+    cell.add(spiral)\n\n# Save the design to a GDS file\nlib.write_gds('spiral.gds')\n\
+    ```"
+  context: Spiral.gds
+  question: Generate a Parametric spiral with r(t) = e^(-0.1t), for 0 <= t <= 6pi,
+    line width 1.
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the design specifications
+
+    bulk_size = (30, 20)  # mm
+
+    via_radius = 2  # mm
+
+    via_separation = 20  # mm
+
+    channel_width = 1  # mm
+
+
+    # Define the layers
+
+    layer_bulk = 0
+
+    layer_via = 2
+
+    layer_channel = 3
+
+
+    # Create a new GDS library and cell
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell(''microfluidic_chip'')
+
+
+    # Draw the bulk of the chip (layer 0)
+
+    bulk = gdspy.Rectangle((0, 0), (bulk_size[0], bulk_size[1]), layer=layer_bulk)
+
+    cell.add(bulk)
+
+
+    # Draw the circular vias (layer 2)
+
+    via1 = gdspy.Round((via_separation / 2, 0), via_radius, number_of_points=100,
+    layer=layer_via)
+
+    via2 = gdspy.Round((bulk_size[0] - via_separation / 2, 0), via_radius, number_of_points=100,
+    layer=layer_via)
+
+    cell.add(via1)
+
+    cell.add(via2)
+
+
+    # Draw the rectangular shaped channel (layer 3)
+
+    channel = gdspy.Rectangle((via_radius, -channel_width/2), (bulk_size[0] - via_radius,
+    channel_width/2), layer=layer_channel)
+
+    cell.add(channel)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds(''microfluidic_chip.gds'')
+
+    ```'
+  context: MicrofluidicChip.gds
+  question: Draw a design of a microfluidic chip. On layer 0, it is the bulk of the
+    chip. It is a 30 * 20 mm rectangle. On layer 2 (via level), draw two circular
+    vias, with 2 mm radius, and 20 mm apart horizontally. On layer 3 (channel level),
+    draw a rectangular shaped channel (width = 1 mm) that connects the two vias at
+    their center.
+- answer: "```python\nimport gdspy\n\n# Define the GDS library and cell\nlib = gdspy.GdsLibrary()\n\
+    cell = lib.new_cell('layout')\n\n# Define the layers\nvia_layer = lib.new_layer(0,\
+    \ 'via')\nmetal_layer = lib.new_layer(1, 'metal')\npad_layer = lib.new_layer(2,\
+    \ 'pad')\n\n# Define the via radius, pad radius, and metal connection width\n\
+    via_radius = 10\npad_radius = 30\nmetal_width = 40\n\n# Define the position of\
+    \ the vias\nvia1_pos = (50, 150)\nvia2_pos = (550, 150)\n\n# Calculate the metal\
+    \ connection length and margin\nmetal_length = via2_pos[0] - via1_pos[0] + 2 *\
+    \ (via_radius + 50)\nmetal_margin = 10\n\n# Create the vias\nvia1 = gdspy.Round(via1_pos,\
+    \ via_radius, layer=via_layer)\nvia2 = gdspy.Round(via2_pos, via_radius, layer=via_layer)\n\
+    cell.add(via1)\ncell.add(via2)\n\n# Create the metal connection\nmetal = gdspy.Rectangle((via1_pos[0]\
+    \ - 50, via1_pos[1] - metal_width/2), \n                        (via2_pos[0] +\
+    \ 50, via2_pos[1] + metal_width/2), \n                        layer=metal_layer)\n\
+    cell.add(metal)\n\n# Create the pads\npad1 = gdspy.Round((via1_pos[0] - (pad_radius\
+    \ + metal_margin), via1_pos[1]), \n                   pad_radius, layer=pad_layer)\n\
+    pad2 = gdspy.Round((via2_pos[0] + (pad_radius + metal_margin), via2_pos[1]), \n\
+    \                   pad_radius, layer=pad_layer)\ncell.add(pad1)\ncell.add(pad2)\n\
+    \n# Save the design to a GDS file\nlib.write_gds('layout.gds')\n```"
+  context: ViaConnection.gds
+  question: 'Create a design with three layers: via layer (yellow), metal layer (blue),
+    and pad layer (red). The via radius is 10 units, pad radius is 30 units, and metal
+    connection width is 40 units with a total length of 600 units. Position the first
+    via at (50, 150) and the second via at (550, 150). Ensure the metal connection
+    fully covers the vias and leaves a margin of 10 units between the edge of the
+    metal and the pads. Leave a space of 50 units between the vias and the edges of
+    the metal connection.'
+- answer: "```python\nimport gdspy\n\n# Define the GDS library and cell\nlib = gdspy.GdsLibrary()\n\
+    cell = lib.new_cell(\"Circle_with_Fiducials\")\n\n# Define the circle parameters\n\
+    circle_radius = 3.2  # in mm\ncircle_center = (0, 0)\n\n# Convert circle radius\
+    \ from mm to um\ncircle_radius_um = circle_radius * 1000\n\n# Create the circle\n\
+    circle = gdspy.Round(circle_center, circle_radius_um, tolerance=0.001)\ncell.add(circle)\n\
+    \n# Define the fiducial mark parameters\nfiducial_size = 200  # in um\nfiducial_spacing\
+    \ = 200  # in um\nfiducial_row_start = ord('A')\nfiducial_col_start = 1\n\n# Create\
+    \ the fiducial marks and annotations\nfor row in range(4):\n    for col in range(4):\n\
+    \        fiducial_center = (\n            (col - 1) * fiducial_spacing,\n    \
+    \        (row - 1) * fiducial_spacing\n        )\n        \n        # Create the\
+    \ fiducial mark\n        fiducial_cross = gdspy.Cross(\n            fiducial_center,\n\
+    \            size=fiducial_size,\n            linewidth=5\n        )\n       \
+    \ cell.add(fiducial_cross)\n        \n        # Create the annotation\n      \
+    \  annotation_text = f\"{chr(fiducial_row_start + row)}{fiducial_col_start + col}\"\
+    \n        annotation = gdspy.Text(\n            annotation_text,\n           \
+    \ 20,\n            fiducial_center,\n            layer=0\n        )\n        cell.add(annotation)\n\
+    \n# Save the design to a GDS file\nlib.write_gds(\"circle_with_fiducials.gds\"\
+    )\n```"
+  context: FiducialCircle.gds
+  question: 'Draw a 3.2 mm circle, with fiducial marks inside. The fiducial marks
+    should be a "+" sign, with equal length and width. Each marker should be 200 um
+    apart. There will be annotations next to each marker. Row: A -> Z, column: start
+    from 1.'
+- answer: "```python\nimport gdspy\n\n# Define the library and cell for the GDS layout\n\
+    lib = gdspy.GdsLibrary()\ncell = lib.new_cell('Layout')\n\n# Define the active\
+    \ region (10 \xB5m x 5 \xB5m)\nactive_region = gdspy.Rectangle(\n    (0, 0), \n\
+    \    (10, 5), \n    layer=1,  # Layer number for the active region\n    datatype=0\n\
+    )\ncell.add(active_region)\n\n# Define the polysilicon gate (1 \xB5m wide)\ngate_width\
+    \ = 1\ngate_height = 5\ngate_x = 5 - gate_width/2  # Centered vertically\ngate\
+    \ = gdspy.Rectangle(\n    (gate_x, 0), \n    (gate_x + gate_width, gate_height),\
+    \ \n    layer=2,  # Layer number for the polysilicon gate\n    datatype=0\n)\n\
+    cell.add(gate)\n\n# Define the contact holes (1 \xB5m x 1 \xB5m each)\n-contact_width\
+    \ = 1\ncontact_height = 1\n-contact_spacing = 1\ncontact_left_x = gate_x - contact_spacing\
+    \ - contact_width\ncontact_right_x = gate_x + gate_width + contact_spacing\ncontact_top_y\
+    \ = gate_height - contact_height\ncontact_left = gdspy.Rectangle(\n    (contact_left_x,\
+    \ contact_top_y), \n    (contact_left_x + contact_width, contact_top_y + contact_height),\
+    \ \n    layer=3,  # Layer number for the contact holes\n    datatype=0\n)\ncell.add(contact_left)\n\
+    \ncontact_right = gdspy.Rectangle(\n    (contact_right_x, contact_top_y), \n \
+    \   (contact_right_x + contact_width, contact_top_y + contact_height), \n    layer=3,\
+    \  # Layer number for the contact holes\n    datatype=0\n)\ncell.add(contact_right)\n\
+    \n# Save the design to a GDS file\nlib.write_gds('layout.gds')\n```"
+  context: BasicLayout.gds
+  question: "1. Draw a rectangular active region with dimensions 10 \xB5m x 5 \xB5\
+    m.\n2. Place a polysilicon gate that crosses the active region vertically at its\
+    \ center, with a width of 1 \xB5m.\n3. Add two square contact holes, each 1 \xB5\
+    m x 1 \xB5m, positioned 1 \xB5m away from the gate on either side along the active\
+    \ region."
+- answer: "```python\nimport gdspy\n\n# Define the layer and cell for the GDS layout\n\
+    lib = gdspy.Library()\ncell = lib.new_cell(\"layout\")\n\n# Define parameters\n\
+    active_region_width = 20\nactive_region_height = 5\nactive_region_spacing = 5\n\
+    gate_width = 0.5\ncontact_size = 1\n\n# Draw three rectangular active regions\n\
+    x_start = 0\nfor i in range(3):\n    active_region = gdspy.Rectangle(\n      \
+    \  (x_start, 0), (x_start + active_region_width, active_region_height)\n    )\n\
+    \    cell.add(active_region)\n    x_start += active_region_width + active_region_spacing\n\
+    \n# Create the polysilicon gate pattern\ngate_x_start = 0\ngate_y_start = active_region_height\n\
+    gate_columns = 10\ngate_rows = 10\ngate_pitch = active_region_height / (gate_rows\
+    \ - 1)\nfor i in range(gate_rows):\n    horizontal_gate = gdspy.Rectangle(\n \
+    \       (gate_x_start, gate_y_start + i * gate_pitch),\n        (gate_x_start\
+    \ + active_region_width * 3 + active_region_spacing * 2, gate_y_start + i * gate_pitch\
+    \ + gate_width),\n        layer=2  # Layer 2 for polysilicon\n    )\n    cell.add(horizontal_gate)\n\
+    \nfor i in range(gate_columns):\n    vertical_gate = gdspy.Rectangle(\n      \
+    \  (gate_x_start + i * gate_pitch, gate_y_start),\n        (gate_x_start + i *\
+    \ gate_pitch + gate_width, gate_y_start + active_region_height),\n        layer=2\
+    \  # Layer 2 for polysilicon\n    )\n    cell.add(vertical_gate)\n\n# Add contact\
+    \ holes at intersections\ncontact_layer = 3  # Layer 3 for contacts\nfor i in\
+    \ range(gate_columns):\n    for j in range(gate_rows):\n        if i < gate_columns\
+    \ - 1 and j < gate_rows - 1:\n            contact_x = gate_x_start + i * gate_pitch\n\
+    \            contact_y = gate_y_start + j * gate_pitch\n            contact =\
+    \ gdspy.Rectangle(\n                (contact_x, contact_y), (contact_x + contact_size,\
+    \ contact_y + contact_size),\n                layer=contact_layer\n          \
+    \  )\n            cell.add(contact)\n\n# Save the design to a GDS file\nlib.write_gds(\"\
+    layout.gds\")\n```"
+  context: ComplexLayout.gds
+  question: "1. Draw three rectangular active regions with dimensions 20 \xB5m x 5\
+    \ \xB5m, positioned horizontally with 5 \xB5m spacing between them.\n2. Create\
+    \ a complex polysilicon gate pattern consisting of multiple vertical and horizontal\
+    \ lines, with widths of 0.5 \xB5m, forming a grid-like structure.\n3. Add several\
+    \ contact holes (each 1 \xB5m x 1 \xB5m) positioned at the intersections of the\
+    \ polysilicon gate pattern and the active regions."
+- answer: "```python\nimport gdspy\n\n# Define the design parameters\ngap_size = 225\
+    \  # nm\npillar_size = 400  # nm\nwidth = 30  # number of pillars\nrow_shift_fraction\
+    \ = 0.1\ninlet_outlet_diameter = 40  # \xB5m\nbus_width = 20  # \xB5m\nbus_length\
+    \ = 50  # \xB5m\n\n# Create the GDS library and cell\nlib = gdspy.Library()\n\
+    cell = lib.new_cell(\"DLDDesign\")\n\n# Define the channel parameters\nchannel_length\
+    \ = pillar_size * width / (1 - row_shift_fraction)\nchannel_width = pillar_size\
+    \ + gap_size\n\n# Create the channel\nchannel = gdspy.Rectangle((0, 0), (channel_length,\
+    \ channel_width))\ncell.add(channel)\n\n# Create the array of pillars\nfor i in\
+    \ range(width):\n    for j in range(int(width / (1 - row_shift_fraction))):\n\
+    \        x = i * pillar_size + j * pillar_size * row_shift_fraction\n        y\
+    \ = 0\n        if i % 2 == 1:\n            y = gap_size / 2\n        pillar =\
+    \ gdspy.Round((x, y), pillar_size / 2, num_points=128)\n        cell.add(pillar)\n\
+    \n# Create the inlet\ninlet = gdspy.Round((channel_length / 2 - inlet_outlet_diameter\
+    \ / 2, -inlet_outlet_diameter / 2), inlet_outlet_diameter / 2, num_points=128)\n\
+    cell.add(inlet)\n\n# Create the outlet\noutlet = gdspy.Round((channel_length /\
+    \ 2 - inlet_outlet_diameter / 2, channel_width + inlet_outlet_diameter / 2), inlet_outlet_diameter\
+    \ / 2, num_points=128)\ncell.add(outlet)\n\n# Create the bus connecting the inlet\
+    \ and outlet to the channel\nbus1 = gdspy.Rectangle((channel_length / 2 - bus_width\
+    \ / 2, -bus_length), (channel_length / 2 + bus_width / 2, -inlet_outlet_diameter\
+    \ / 2))\nbus2 = gdspy.Rectangle((channel_length / 2 - bus_width / 2, channel_width\
+    \ + inlet_outlet_diameter / 2), (channel_length / 2 + bus_width / 2, channel_width\
+    \ + bus_length))\ncell.add(bus1)\ncell.add(bus2)\n\n# Save the design to a GDS\
+    \ file\nlib.write_gds(\"dld_design.gds\")\n```"
+  context: DLDChip.gds
+  question: "Draw a deterministic lateral displacement chip - include channel that\
+    \ can hold the array has gap size = 225 nm, circular pillar size = 400 nm, width\
+    \ = 30 pillars, row shift fraction = 0.1, add an inlet and outlet 40 \xB5m diameter\
+    \ before and after the channel, use a 20*50 \xB5m bus to connect the inlet and\
+    \ outlet to the channel."
+- answer: "```python\nimport gdspy\n\n# Define the GDS library and cell\nlib = gdspy.GdsLibrary()\n\
+    cell = lib.new_cell('FinFET')\n\n# Define the layers\nFIN_LAYER = (1, 0)  # Layer\
+    \ 1, datatype 0\nGATE_LAYER = (2, 0)  # Layer 2, datatype 0\nSD_LAYER = (3, 0)\
+    \  # Layer 3, datatype 0\n\n# Fin dimensions\nfin_width = 0.1  # \xB5m\nfin_height\
+    \ = 0.2  # \xB5m\nfin_length = 1.0  # \xB5m\n\n# Fin coordinates\nfin_x1 = 0\n\
+    fin_y1 = -fin_height / 2\nfin_x2 = fin_length\nfin_y2 = fin_y1 + fin_height\n\n\
+    # Create the fin shape\nfin = gdspy.Rectangle((fin_x1, fin_y1), (fin_x2, fin_y2),\
+    \ FIN_LAYER)\ncell.add(fin)\n\n# Gate dimensions\ngate_length = 0.1  # \xB5m\n\
+    \n# Gate coordinates\ngate_x1 = (fin_length - gate_length) / 2\ngate_y1 = fin_y2\
+    \ + 0.1  # Add a small gap between the fin and gate\ngate_x2 = gate_x1 + gate_length\n\
+    gate_y2 = gate_y1 + 0.2  # Gate height\n\n# Create the gate shape\ngate = gdspy.Rectangle((gate_x1,\
+    \ gate_y1), (gate_x2, gate_y2), GATE_LAYER)\ncell.add(gate)\n\n# Source/drain\
+    \ dimensions\nsd_length = 0.4  # \xB5m\nsd_extension = 0.2  # \xB5m\n\n# Source\
+    \ coordinates\nsource_x1 = fin_x1 - sd_extension\nsource_y1 = fin_y1\nsource_x2\
+    \ = source_x1 + sd_length\nsource_y2 = source_y1 + fin_height\n\n# Create the\
+    \ source shape\nsource = gdspy.Rectangle((source_x1, source_y1), (source_x2, source_y2),\
+    \ SD_LAYER)\ncell.add(source)\n\n# Drain coordinates\ndrain_x1 = fin_x2 + sd_extension\
+    \ - sd_length\ndrain_y1 = fin_y1\ndrain_x2 = drain_x1 + sd_length\ndrain_y2 =\
+    \ drain_y1 + fin_height\n\n# Create the drain shape\ndrain = gdspy.Rectangle((drain_x1,\
+    \ drain_y1), (drain_x2, drain_y2), SD_LAYER)\ncell.add(drain)\n\n# Save the design\
+    \ to a GDS file\nlib.write_gds('finfet.gds')\n```"
+  context: FinFET.gds
+  question: "Draw a FinFET with the following specifications:\n- Fin width: 0.1 \xB5\
+    m\n- Fin height: 0.2 \xB5m\n- Fin length: 1.0 \xB5m\n- Gate length: 0.1 \xB5m\n\
+    - Source/drain length: 0.4 \xB5m\n- Source/drain extension beyond the fin: 0.2\
+    \ \xB5m\nUse separate layers for the fin, gate, and source/drain regions."
+- answer: '```python
+
+    import gdspy
+
+    import numpy as np
+
+
+    # Define the library and cell for the GDS layout
+
+    lib = gdspy.Library()
+
+    cell = lib.new_cell("hexagon")
+
+
+    # Define the parameters of the hexagon
+
+    edge_length = 10  # in mm
+
+    center_x, center_y = 0, 0
+
+
+    # Calculate the coordinates of the vertices of the hexagon
+
+    angle = np.linspace(0, 2*np.pi, 6, endpoint=False)
+
+    vertices_x = center_x + edge_length * np.cos(angle)
+
+    vertices_y = center_y + edge_length * np.sin(angle)
+
+
+    # Create the hexagon polygon
+
+    hexagon = gdspy.Polygon(vertices=[(x, y) for x, y in zip(vertices_x, vertices_y)])
+
+
+    # Add the hexagon to the cell
+
+    cell.add(hexagon)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds("hexagon.gds")
+
+    ```'
+  context: Hexagon.gds
+  question: Generate a regular hexagon with each edge 10 mm, center at 0,0.
+- answer: "```python\nimport numpy as np\nimport gdspy\n\n# Define the edge length\
+    \ and center of the pentagon\nedge_length = 10\ncenter_x, center_y = 0, 0\n\n\
+    # Calculate the coordinates of the pentagon vertices\nangle = 2 * np.pi / 5\n\
+    vertices = []\nfor i in range(5):\n    x = center_x + edge_length * np.cos(i *\
+    \ angle)\n    y = center_y + edge_length * np.sin(i * angle)\n    vertices.append((x,\
+    \ y))\n\n# Create the GDS library and cell\nlib = gdspy.GdsLibrary()\ncell = lib.new_cell('pentagon')\n\
+    \n# Create the pentagon polygon\npentagon = gdspy.Polygon(vertices, 1)\n\n# Add\
+    \ the pentagon to the cell\ncell.add(pentagon)\n\n# Save the design to a GDS file\n\
+    lib.write_gds('pentagon.gds')\n```"
+  context: Pentagon.gds
+  question: Generate a regular pentagon with each edge 10 mm, center at 0,0.
+- answer: '```python
+
+    import gdspy
+
+
+    # Define the GDS library and cell
+
+    lib = gdspy.GdsLibrary()
+
+    cell = lib.new_cell("HelloGDS")
+
+
+    # Create the text element
+
+    text = gdspy.Text("Hello, GDS!", 5, (0, 0), layer=1)
+
+
+    # Center the text at (0, 0)
+
+    text.translate(-text.get_bounding_box().center[0], -text.get_bounding_box().center[1])
+
+
+    # Add the text to the cell
+
+    cell.add(text)
+
+
+    # Save the design to a GDS file
+
+    lib.write_gds("HelloGDS.gds")
+
+    ```'
+  context: Text.gds
+  question: Generate a GDS file with the text "Hello, GDS!" centered at (0,0), with
+    a height of 5 mm, on layer 1.
+task_description: Generate Python code for GDS shapes using watsonx/meta-llama/llama-3-1-70b-instruct
+version: 2

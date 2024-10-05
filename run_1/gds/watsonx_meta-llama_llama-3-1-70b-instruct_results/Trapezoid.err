@@ -1,0 +1,10 @@
+Error in Trapezoid.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpzitcuh86/temp_script.py", line 31, in <module>
+    gdspy.write_gds('trapezoid.gds', cell, unit=1.0e-6, precision=1.0e-9)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/__init__.py", line 93, in write_gds
+    current_library.write_gds(outfile, cells, timestamp, binary_cells)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2503, in write_gds
+    cell.to_gds(outfile, self.unit / self.precision, timestamp=timestamp)
+TypeError: PolygonSet.to_gds() got an unexpected keyword argument 'timestamp'

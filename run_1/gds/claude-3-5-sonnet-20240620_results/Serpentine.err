@@ -1,0 +1,7 @@
+Error in Serpentine.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp7dc09p_d/temp_script.py", line 35, in <module>
+    serpentine = gdspy.PathPolygon(points, path_width, layer=layer, datatype=datatype)
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'PathPolygon'

@@ -1,0 +1,6 @@
+Error in Grid.gds:
+
+  File "/tmp/tmpxzg51ah_/temp_script.py", line 9
+    x-coordinate = 100
+    ^^^^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?

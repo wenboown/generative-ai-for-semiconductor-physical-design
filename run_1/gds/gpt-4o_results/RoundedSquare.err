@@ -1,0 +1,7 @@
+Error in RoundedSquare.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpk493e2he/temp_script.py", line 29, in <module>
+    corner1 = gdspy.Round((corner_radius, corner_radius), corner_radius, number_of_points=64, inner_radius=0, initial_angle=-0.5*gdspy.pi, final_angle=0)
+                                                                                                                                 ^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'pi'

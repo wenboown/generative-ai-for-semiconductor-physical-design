@@ -1,0 +1,10 @@
+Error in Donut.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmprxgcb4ht/temp_script.py", line 35, in <module>
+    donut = gdspy.boolean([outer_polygon], [inner_polygon], 'subtract')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/operation.py", line 259, in boolean
+    result = clipper.clip(poly1, poly2, operation, 1 / precision)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Operation must be one of 'or', 'and', 'xor', 'not'.

@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp0shar3it/temp_script.py", line 18, in <module>
+    fiducial = gdspy.CrossSection(
+               ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'CrossSection'

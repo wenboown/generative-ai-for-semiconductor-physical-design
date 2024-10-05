@@ -1,0 +1,6 @@
+Error in FiducialCircle.gds:
+
+  File "/tmp/tmpe4gw9d04/temp_script.py", line 28
+    fiducial1 = gdspy.abstractfibonacci ThiếtIVERYpopulate(
+                                        ^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

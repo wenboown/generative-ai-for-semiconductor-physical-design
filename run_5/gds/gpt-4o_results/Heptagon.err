@@ -1,0 +1,11 @@
+Error in Heptagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp2jc46uw4/temp_script.py", line 32, in <module>
+    gdspy.write_gds('heptagon.gds', [lib])
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/__init__.py", line 93, in write_gds
+    current_library.write_gds(outfile, cells, timestamp, binary_cells)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2503, in write_gds
+    cell.to_gds(outfile, self.unit / self.precision, timestamp=timestamp)
+    ^^^^^^^^^^^
+AttributeError: 'GdsLibrary' object has no attribute 'to_gds'

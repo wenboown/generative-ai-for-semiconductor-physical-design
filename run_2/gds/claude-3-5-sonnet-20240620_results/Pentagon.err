@@ -1,0 +1,7 @@
+Error in Pentagon.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp3i3vf6ee/temp_script.py", line 36, in <module>
+    cell.center = (0, 0)
+    ^^^^^^^^^^^
+AttributeError: 'Cell' object has no attribute 'center'

@@ -1,0 +1,6 @@
+Error in Pentagon.gds:
+
+  File "/tmp/tmprmxf1_5v/temp_script.py", line 31
+    pip install gdspy
+        ^^^^^^^
+SyntaxError: invalid syntax

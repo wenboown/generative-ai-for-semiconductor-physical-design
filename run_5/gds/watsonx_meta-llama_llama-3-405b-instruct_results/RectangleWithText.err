@@ -1,0 +1,10 @@
+Error in RectangleWithText.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpl1luedct/temp_script.py", line 22, in <module>
+    text = gdspy.Text("IBM Research", (text_x, text_y), layer=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 973, in __init__
+    text_multiplier = size / 9.0
+                      ~~~~~^~~~~
+TypeError: unsupported operand type(s) for /: 'tuple' and 'float'

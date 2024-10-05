@@ -1,0 +1,6 @@
+Error in Spiral.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp3sr5yhbs/temp_script.py", line 29, in <module>
+    path.segment(abs(point[0] - path.x) + abs(point[1] - path.y), direction=None, final_point=point)
+TypeError: Path.segment() got an unexpected keyword argument 'final_point'

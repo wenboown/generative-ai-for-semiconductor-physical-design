@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpoa9h9tgq/temp_script.py", line 30, in <module>
+    fiducial = gdspy.Path(nr_points=2, width=fiducial_width, layer=1)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.__init__() got an unexpected keyword argument 'nr_points'

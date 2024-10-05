@@ -1,0 +1,7 @@
+Error in Donut.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp3nbdn8jv/temp_script.py", line 30, in <module>
+    donut.holes([inner_circle])
+    ^^^^^^^^^^^
+AttributeError: 'Polygon' object has no attribute 'holes'

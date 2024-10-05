@@ -1,0 +1,10 @@
+Error in RoundedSquare.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpxpa60blh/temp_script.py", line 12, in <module>
+    square = gdspy.Round(
+             ^^^^^^^^^^^^
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/polygon.py", line 798, in __init__
+    self.polygons[ii][:, 0] = numpy.cos(t) * orx + center[0]
+                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (128,) (2,) 

@@ -1,0 +1,7 @@
+Error in RectangleWithText.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp9m_4t6at/temp_script.py", line 16, in <module>
+    lib.gdsii.write_gds('IBM_Research.gds')
+    ^^^^^^^^^
+AttributeError: 'GdsLibrary' object has no attribute 'gdsii'

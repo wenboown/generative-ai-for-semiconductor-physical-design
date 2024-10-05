@@ -1,0 +1,15 @@
+Error in FiducialCircle.gds:
+
+/tmp/tmpwivg201v/temp_script.py:32: UserWarning: [GDSPY] Cell PolygonSet (1 polygons, 12 vertices, layers [0], datatypes [0]) not found; operations on this CellReference may not work.
+  cell.add(gdspy.CellReference(fiducial, (x, y)))
+Traceback (most recent call last):
+  File "/tmp/tmpwivg201v/temp_script.py", line 43, in <module>
+    lib.write_gds('fiducial_circle.gds')
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 2503, in write_gds
+    cell.to_gds(outfile, self.unit / self.precision, timestamp=timestamp)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 177, in to_gds
+    reference.to_gds(outfile, multiplier)
+  File "/data1/bwen-data/instructlab/generative-ai-for-semiconductor-physical-design/.venv/lib64/python3.11/site-packages/gdspy/library.py", line 1152, in to_gds
+    if len(name) % 2 != 0:
+       ^^^^^^^^^
+TypeError: object of type 'PolygonSet' has no len()

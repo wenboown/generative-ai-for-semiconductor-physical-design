@@ -1,0 +1,7 @@
+Error in RectangleWithText.gds:
+
+Traceback (most recent call last):
+  File "/var/folders/29/g4qw7yqd7r72_1d_ps3zjfvc0000gn/T/tmpo3gtu1uj/temp_script.py", line 17, in <module>
+    text = gdspy.Text(text_string, text_size=text_size, position=text_position, layer=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'text_size'

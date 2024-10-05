@@ -1,0 +1,7 @@
+Error in ViaConnection.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmphiwmmva0/temp_script.py", line 31, in <module>
+    metal_path = gdspy.Path(metal_width, (via1_center[0] - via_metal_space, via1_center[1]), **metal_layer)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.__init__() got an unexpected keyword argument 'layer'

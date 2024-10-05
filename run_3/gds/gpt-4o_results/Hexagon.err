@@ -1,0 +1,6 @@
+Error in Hexagon.gds:
+
+  File "/tmp/tmp0jzj8r2j/temp_script.py", line 34
+    pip install gdspy
+        ^^^^^^^
+SyntaxError: invalid syntax

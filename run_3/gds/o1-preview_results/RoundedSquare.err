@@ -1,0 +1,6 @@
+Error in RoundedSquare.gds:
+
+  File "/tmp/tmpytb6kmfj/temp_script.py", line 106
+    pip install gdspy
+        ^^^^^^^
+SyntaxError: invalid syntax

@@ -1,0 +1,7 @@
+Error in FinFET.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpsntmssa_/temp_script.py", line 30, in <module>
+    sd2.translate(sd2.size[1][0]/2 + fin_length/2, 0)
+                  ^^^^^^^^
+AttributeError: 'Rectangle' object has no attribute 'size'

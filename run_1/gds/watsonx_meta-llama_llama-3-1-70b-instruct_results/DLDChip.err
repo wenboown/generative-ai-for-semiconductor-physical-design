@@ -1,0 +1,10 @@
+Error in DLDChip.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpfz2hph27/temp_script.py", line 35, in <module>
+    inlet = create_inlet_outlet(0, 0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmpfz2hph27/temp_script.py", line 29, in create_inlet_outlet
+    return gdspy.Circular((x, y), inlet_outlet_diameter/2, number_of_points=64)
+           ^^^^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Circular'

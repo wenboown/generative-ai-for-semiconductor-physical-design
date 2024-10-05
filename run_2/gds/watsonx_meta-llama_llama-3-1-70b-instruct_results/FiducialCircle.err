@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpobp2za0t/temp_script.py", line 49, in <module>
+    annotation = gdspy.Text(
+                 ^^^^^^^^^^^
+TypeError: Text.__init__() got an unexpected keyword argument 'x'

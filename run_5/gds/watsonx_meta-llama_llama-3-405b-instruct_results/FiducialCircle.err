@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpg5265_99/temp_script.py", line 53, in <module>
+    annotation = gdspy.Label(f"{chr(65 + int((i + num_fiducials) / 2))}{int((j + num_fiducials) / 2) + 1}", 
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Label.__init__() got an unexpected keyword argument 'size'

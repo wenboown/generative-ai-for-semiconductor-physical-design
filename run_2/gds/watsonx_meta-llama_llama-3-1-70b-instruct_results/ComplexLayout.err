@@ -1,0 +1,7 @@
+Error in ComplexLayout.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpyei32gyj/temp_script.py", line 27, in <module>
+    poly_gate_line = gdspy.Rectangle([x, 0], [x + poly_gate_width, 10 * unit], width=poly_gate_width)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Rectangle.__init__() got an unexpected keyword argument 'width'

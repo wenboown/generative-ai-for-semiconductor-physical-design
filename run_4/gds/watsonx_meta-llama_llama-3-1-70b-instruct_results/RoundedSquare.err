@@ -1,0 +1,7 @@
+Error in RoundedSquare.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp9fd7r5wi/temp_script.py", line 28, in <module>
+    path = gdspy.Path([points], width=0).fracture(0.001)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.__init__() got multiple values for argument 'width'

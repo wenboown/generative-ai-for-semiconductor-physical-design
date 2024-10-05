@@ -1,0 +1,7 @@
+Error in ComplexLayout.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpqbp8fio7/temp_script.py", line 50, in <module>
+    for j, x in enumerate(range(0, 2*(active_width + spacing), poly_spacing + poly_width)):
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer

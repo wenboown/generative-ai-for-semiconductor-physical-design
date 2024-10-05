@@ -1,0 +1,6 @@
+Error in DLDChip.gds:
+
+  File "/tmp/tmp5h54gyk9/temp_script.py", line 59
+    pip install gdspy
+        ^^^^^^^
+SyntaxError: invalid syntax

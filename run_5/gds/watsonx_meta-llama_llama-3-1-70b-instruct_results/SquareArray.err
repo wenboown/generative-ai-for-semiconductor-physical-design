@@ -1,0 +1,6 @@
+Error in SquareArray.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpl7k5pn4w/temp_script.py", line 38, in <module>
+    cell.add(*squares)
+TypeError: Cell.add() takes 2 positional arguments but 101 were given

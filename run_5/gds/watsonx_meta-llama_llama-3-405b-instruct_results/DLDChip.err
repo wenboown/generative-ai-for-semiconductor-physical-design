@@ -1,0 +1,6 @@
+Error in DLDChip.gds:
+
+  File "/tmp/tmpph6k7ah_/temp_script.py", line 19
+    pillar spacing = pillar_size + gap_size
+           ^^^^^^^
+SyntaxError: invalid syntax

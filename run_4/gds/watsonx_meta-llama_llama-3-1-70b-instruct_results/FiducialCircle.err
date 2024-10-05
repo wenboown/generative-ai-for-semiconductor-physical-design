@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmp4syzfbq8/temp_script.py", line 15, in <module>
+    circle = gdspy.Round((0, 0), circle_radius * 1000, num_points=128)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Round.__init__() got an unexpected keyword argument 'num_points'

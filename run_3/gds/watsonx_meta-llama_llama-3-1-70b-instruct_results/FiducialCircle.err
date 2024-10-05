@@ -1,0 +1,7 @@
+Error in FiducialCircle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpv026rd0x/temp_script.py", line 33, in <module>
+    fiducial_cross = gdspy.Cross(
+                     ^^^^^^^^^^^
+AttributeError: module 'gdspy' has no attribute 'Cross'

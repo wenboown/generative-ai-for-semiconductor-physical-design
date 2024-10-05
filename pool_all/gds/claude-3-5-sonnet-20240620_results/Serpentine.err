@@ -1,0 +1,12 @@
+Error in Serpentine.gds:
+
+Traceback (most recent call last):
+  File "/var/folders/29/g4qw7yqd7r72_1d_ps3zjfvc0000gn/T/tmpdkw159n6/temp_script.py", line 21, in <module>
+    path.segment(segment_length, '+y')
+  File "/Users/bwen/personal/llm-layout/.venv/lib/python3.11/site-packages/gdspy/path.py", line 1339, in segment
+    self.points = numpy.vstack(
+                  ^^^^^^^^^^^^^
+  File "/Users/bwen/personal/llm-layout/.venv/lib/python3.11/site-packages/numpy/_core/shape_base.py", line 287, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 2 and the array at index 1 has size 1

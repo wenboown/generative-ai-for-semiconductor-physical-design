@@ -1,0 +1,6 @@
+Error in Circle.gds:
+
+Traceback (most recent call last):
+  File "/tmp/tmpp95rmfwe/temp_script.py", line 21, in <module>
+    lib.write_gds('circle.gds', unit=1.0e-6, precision=1.0e-9)
+TypeError: GdsLibrary.write_gds() got an unexpected keyword argument 'unit'
