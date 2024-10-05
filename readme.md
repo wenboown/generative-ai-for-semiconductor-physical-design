@@ -6,9 +6,12 @@ This repository contains the code for the paper: "Enhancing Reasoning to Adapt L
 
 We release the complete benchmark dataset of 25 tasks and LLM API calling code under the Apache 2.0 license. This repository includes 5 runs of results (LLM answers, Python code, error logs, and PNGs) for each task in the baseline experiment for reproducibility.
 
+To see all the existing results, go to [`plot_experiment.md`](https://github.com/wenboown/generative-ai-for-semiconductor-physical-design/blob/main/plot_experiment.md)
+
 ## Requirements
 
 - Python 3.11
+- API keys for OpenAI, Anthropic, and IBM Watsonx
 
 ## Repository Contents
 
@@ -19,7 +22,7 @@ We release the complete benchmark dataset of 25 tasks and LLM API calling code u
 5. `gds2png.py`: Generates PNG images from GDS with scale bar text.
 6. `basic_experiments.py`: Generates baseline experiment results and output YAMLs in run folders.
 7. `runs2png.py`: Generates GDS, Python, error, and PNG images for all runs.
-8. `gen_visual_plots.py`: Creates `plot_experiment.md` for visualizing results for human evaluation.
+8. `gen_visual_plots.py`: Creates [`plot_experiment.md`](plot_experiment.md) for visualizing results for human evaluation.
 9. `analysis_err.py`: Generates error reports from the runs.
 
 ## Setup and Execution
@@ -51,7 +54,7 @@ We release the complete benchmark dataset of 25 tasks and LLM API calling code u
    ```
 
 6. Human evaluation:
-   - Inspect `plot_experiment.md` on GitHub (which will render the images)
+   - Inspect [`plot_experiment.md`](plot_experiment.md) on GitHub (which will render the images)
    - Enter the information into `plots/test_result.csv`
    - (Optional) use the `figure.ipynb` to plot the results.
 
